@@ -1,7 +1,0 @@
-RUSLAN VORONTSOV
-Senior Frontend Engineer
-
-Vue.js · Nuxt · TypeScript
-Building scalable, accessible and high-performance web applications.
-
-Contact: hello@ruslan.dev

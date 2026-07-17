@@ -1,4 +1,5 @@
 export const useAnimePortfolio = () => {
+  const { locale } = useLocale()
   let cleanup = () => {}
 
   onMounted(async () => {
@@ -15,6 +16,7 @@ export const useAnimePortfolio = () => {
     const animations: Array<{ revert: () => unknown }> = []
     const scrollObservers: Array<{ revert: () => unknown }> = []
     const listeners: Array<[EventTarget, string, EventListener]> = []
+    const revealedElements = new WeakSet<Element>()
     root.classList.add('anime-ready')
 
     const play = (targets: Parameters<typeof animate>[0], parameters: Parameters<typeof animate>[1]) => {
@@ -56,10 +58,50 @@ export const useAnimePortfolio = () => {
       ease: 'inOutSine',
     })
 
+    const revealProgressBars = (element: Element) => {
+      const bars = [...element.querySelectorAll<HTMLElement>('[data-progress]')]
+      if (!bars.length) return
+
+      play(bars, {
+        width: (target: HTMLElement) => `${target.dataset.progress}%`,
+        duration: 1050,
+        delay: stagger(65, { start: 180 }),
+        ease: 'inOut(3)',
+      })
+    }
+
+    const revealTechItems = (element: Element) => {
+      const techItems = element.querySelectorAll('[data-tech-item]')
+      if (!techItems.length) return
+
+      play(techItems, {
+        opacity: [0, 1],
+        y: [14, 0],
+        scale: [.96, 1],
+        duration: 520,
+        delay: stagger(45, { start: 160 }),
+        ease: 'out(3)',
+      })
+    }
+
+    const showRevealedElement = (element: HTMLElement) => {
+      revealedElements.add(element)
+      element.style.opacity = '1'
+      element.style.transform = 'none'
+      element.querySelectorAll<HTMLElement>('[data-tech-item]').forEach((item) => {
+        item.style.opacity = '1'
+        item.style.transform = 'none'
+      })
+      element.querySelectorAll<HTMLElement>('[data-progress]').forEach((bar) => {
+        bar.style.width = `${bar.dataset.progress}%`
+      })
+    }
+
     const revealObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return
         const element = entry.target as HTMLElement
+        revealedElements.add(element)
         play(element, {
           opacity: [0, 1],
           y: [42, 0],
@@ -68,42 +110,42 @@ export const useAnimePortfolio = () => {
           ease: 'out(4)',
         })
 
-        const bars = [...element.querySelectorAll<HTMLElement>('[data-progress]')]
-        if (bars.length) {
-          play(bars, {
-            width: (target: HTMLElement) => `${target.dataset.progress}%`,
-            duration: 1050,
-            delay: stagger(65, { start: 180 }),
-            ease: 'inOut(3)',
-          })
-        }
-
-        const techItems = element.querySelectorAll('[data-tech-item]')
-        if (techItems.length) {
-          play(techItems, {
-            opacity: [0, 1],
-            y: [14, 0],
-            scale: [.96, 1],
-            duration: 520,
-            delay: stagger(45, { start: 160 }),
-            ease: 'out(3)',
-          })
-        }
+        revealProgressBars(element)
+        revealTechItems(element)
         observer.unobserve(element)
       })
     }, { threshold: .14, rootMargin: '0px 0px -7% 0px' })
 
-    document.querySelectorAll('[data-reveal]').forEach((element) => revealObserver.observe(element))
+    const syncRevealTargets = () => {
+      document.querySelectorAll<HTMLElement>('[data-reveal]').forEach((element) => {
+        if (revealedElements.has(element)) {
+          showRevealedElement(element)
+          revealObserver.unobserve(element)
+          return
+        }
 
-    const heroImage = document.querySelector('.hero-visual img')
-    if (heroImage) {
+        const rect = element.getBoundingClientRect()
+        if (rect.top < window.innerHeight * .93) {
+          showRevealedElement(element)
+          revealObserver.unobserve(element)
+          return
+        }
+
+        revealObserver.observe(element)
+      })
+    }
+
+    syncRevealTargets()
+
+    const heroPhoto = document.querySelector('.hero-photo')
+    if (heroPhoto) {
       const heroScroll = onScroll({
         target: '.hero',
         enter: 'top top',
         leave: 'bottom top',
         sync: .7,
       })
-      heroScroll.link(play(heroImage, { y: ['0%', '9%'], scale: [1, 1.045], ease: 'linear' }))
+      heroScroll.link(play(heroPhoto, { y: ['0%', '9%'], scale: [1, 1.045], ease: 'linear' }))
       scrollObservers.push(heroScroll)
     }
 
@@ -182,7 +224,13 @@ export const useAnimePortfolio = () => {
       listeners.push([item, 'pointerenter', enter], [item, 'pointerleave', leave])
     })
 
+    const stopLocaleWatch = watch(locale, async () => {
+      await nextTick()
+      syncRevealTargets()
+    })
+
     cleanup = () => {
+      stopLocaleWatch()
       revealObserver.disconnect()
       scrollObservers.forEach((observer) => observer.revert())
       animations.forEach((animation) => animation.revert())

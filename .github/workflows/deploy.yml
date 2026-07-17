@@ -36,6 +36,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Generate CV PDFs
+        run: npm run cv:pdf
+
       - name: Generate static site
         env:
           GITHUB_PAGES: ''

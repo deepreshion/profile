@@ -1,19 +1,35 @@
 <script setup lang="ts">
 import { ArrowDownToLine, Menu, X } from 'lucide-vue-next'
+
 const open = ref(false)
-const links = ['About', 'Skills', 'Projects', 'Experience']
-const cvHref = `${useRuntimeConfig().app.baseURL}ruslan-vorontsov-cv.txt`
+const { locale, locales, setLocale } = useLocale()
+const content = usePortfolioContent()
+const baseURL = useRuntimeConfig().app.baseURL
+const cvHref = computed(() => `${baseURL}ruslan-vorontsov-cv-${locale.value}.pdf`)
 </script>
 
 <template>
   <header class="site-header">
-    <a class="monogram" href="#top" aria-label="Back to top" data-header-item>RV<span>.</span></a>
-    <nav :class="{ open }" aria-label="Main navigation">
-      <a v-for="link in links" :key="link" :href="`#${link.toLowerCase()}`" data-header-item @click="open = false">{{ link }}</a>
-      <a href="#contact" data-header-item @click="open = false">Contact</a>
+    <a class="monogram" href="#top" :aria-label="content.header.backToTop" data-header-item>RV<span>.</span></a>
+    <nav :class="{ open }" :aria-label="content.header.navigationLabel">
+      <a v-for="link in content.header.links" :key="link.href" :href="link.href" data-header-item @click="open = false">{{ link.label }}</a>
     </nav>
-    <a class="cv-link" :href="cvHref" download data-header-item data-magnetic><ArrowDownToLine :size="16" /> Download CV</a>
-    <button class="menu-button" :aria-expanded="open" aria-label="Toggle menu" @click="open = !open">
+    <div class="header-actions">
+      <a class="cv-link" :href="cvHref" download data-header-item data-magnetic><ArrowDownToLine :size="16" /> {{ content.header.downloadCv }}</a>
+      <div class="language-switch" :aria-label="content.header.languageLabel" data-header-item>
+        <button
+          v-for="item in locales"
+          :key="item"
+          type="button"
+          :class="{ active: locale === item }"
+          :aria-pressed="locale === item"
+          @click="setLocale(item)"
+        >
+          {{ item.toUpperCase() }}
+        </button>
+      </div>
+    </div>
+    <button class="menu-button" :aria-expanded="open" :aria-label="content.header.menuLabel" @click="open = !open">
       <X v-if="open" /><Menu v-else />
     </button>
   </header>
