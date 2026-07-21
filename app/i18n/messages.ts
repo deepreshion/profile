@@ -81,11 +81,34 @@ export const portfolioMessages = {
         years: 'Mar 2020 - Present',
         company: 'Program Product',
         role: 'Senior Frontend Engineer',
-        achievements: [
-          'Built corporate web applications, admin systems, CMS products and B2B platforms with Vue 3 and TypeScript',
-          'Acted as technical lead on 10+ of 25+ projects, shaping architecture and module decomposition',
-          'Introduced microfrontend architecture, E2E testing with Cypress and common code standards',
-          'Used AI-assisted workflows and coding agents to automate codebase analysis, refactoring support, test scaffolding, documentation and delivery checks'
+        roles: [
+          {
+            years: '2024 - Present',
+            role: 'Senior Frontend Engineer',
+            achievements: [
+              'Acted as technical lead',
+              'Owned architecture and shared code standards',
+              'Introduced AI-assisted workflows to speed up work processes'
+            ]
+          },
+          {
+            years: '2022 - 2024',
+            role: 'Middle Frontend Engineer',
+            achievements: [
+              'Built corporate web applications, admin systems and B2B platforms with Vue 3 and TypeScript',
+              'Improved outdated project tech stacks, including migration and modernization',
+              'Improved release quality through smoke checks, E2E scenarios and shared frontend standards'
+            ]
+          },
+          {
+            years: 'Mar 2020 - 2022',
+            role: 'Frontend Developer',
+            achievements: [
+              'Developed Vue and TypeScript modules',
+              'Built page layouts',
+              'Implemented forms, tables, filters and other reusable components'
+            ]
+          }
         ]
       },
       {
@@ -124,7 +147,7 @@ export const portfolioMessages = {
     details: [
       { icon: 'mapPin', label: 'Location', value: 'Russia - Remote worldwide' },
       { icon: 'clock', label: 'Experience', value: '6+ years' },
-      { icon: 'languages', label: 'Languages', value: 'Russian native - English A2' }
+      { icon: 'languages', label: 'Languages', value: 'Russian native - English B1' }
     ],
     footer: {
       kicker: 'Looking for a frontend engineer?',
@@ -214,11 +237,34 @@ export const portfolioMessages = {
         years: 'Март 2020 - сейчас',
         company: 'Program Product',
         role: 'Senior Frontend Engineer',
-        achievements: [
-          'Разрабатывал корпоративные веб-приложения, админ-системы, CMS-продукты и B2B-платформы на Vue 3 и TypeScript',
-          'Выступал техническим лидером на 10+ из 25+ проектов, определяя архитектуру и декомпозицию модулей',
-          'Внедрял микрофронтенд-архитектуру, E2E-тестирование на Cypress и общие стандарты кода',
-          'Использовал AI-assisted workflows и coding agents для автоматизации анализа кодовой базы, поддержки рефакторинга, подготовки тестов, документации и delivery-проверок'
+        roles: [
+          {
+            years: '2024 - сейчас',
+            role: 'Senior Frontend Engineer',
+            achievements: [
+              'Выступал техническим лидером',
+              'Отвечал за архитектуру и общие стандарты кода',
+              'Внедрял AI-assisted workflows для ускорения рабочих процессов'
+            ]
+          },
+          {
+            years: '2022 - 2024',
+            role: 'Middle Frontend Engineer',
+            achievements: [
+              'Разрабатывал корпоративные веб-приложения, админ-системы и B2B-платформы на Vue 3 и TypeScript',
+              'Работал над улучшением устаревшего технического стека проектов, его миграцией и актуализацией',
+              'Улучшал качество релизов через smoke-проверки, E2E-сценарии и общие фронтенд-стандарты'
+            ]
+          },
+          {
+            years: 'Март 2020 - 2022',
+            role: 'Frontend Developer',
+            achievements: [
+              'Разрабатывал Vue- и TypeScript-мудули',
+              'Занимался версткой страниц',
+              'Реализовывал формы, таблицы, фильтры и другие переиспользуемые компоненты',
+            ]
+          }
         ]
       },
       {
@@ -257,7 +303,7 @@ export const portfolioMessages = {
     details: [
       { icon: 'mapPin', label: 'Локация', value: 'Россия - удаленно по миру' },
       { icon: 'clock', label: 'Опыт', value: '6+ лет' },
-      { icon: 'languages', label: 'Языки', value: 'Русский родной - английский A2' }
+      { icon: 'languages', label: 'Языки', value: 'Русский родной - английский B1' }
     ],
     footer: {
       kicker: 'Нужен фронтенд-инженер?',

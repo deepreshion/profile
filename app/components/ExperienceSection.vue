@@ -3,6 +3,12 @@ import { Check } from "lucide-vue-next";
 
 const { experience, workCases } = usePortfolio();
 const content = usePortfolioContent();
+
+const hasRoleBreakdown = (
+  job: (typeof experience.value)[number],
+): job is (typeof experience.value)[number] & {
+  roles: Array<{ years: string; role: string; achievements: readonly string[] }>;
+} => "roles" in job;
 </script>
 
 <template>
@@ -38,7 +44,29 @@ const content = usePortfolioContent();
             <h4>
               {{ job.company }}
             </h4>
-            <ul>
+            <div v-if="hasRoleBreakdown(job)" class="role-breakdown">
+              <section
+                v-for="role in job.roles"
+                :key="`${job.company}-${role.years}-${role.role}`"
+                class="role-breakdown-item"
+              >
+                <div class="role-breakdown-head">
+                  <h5>
+                    {{ role.role }}
+                  </h5>
+                  <time>
+                    {{ role.years }}
+                  </time>
+                </div>
+                <ul>
+                  <li v-for="item in role.achievements" :key="item">
+                    <Check :size="14" />
+                    {{ item }}
+                  </li>
+                </ul>
+              </section>
+            </div>
+            <ul v-else>
               <li v-for="item in job.achievements" :key="item">
                 <Check :size="14" />
                 {{ item }}

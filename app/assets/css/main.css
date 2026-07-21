@@ -894,6 +894,29 @@ main,
   color: var(--muted);
   font-weight: 400;
 }
+.role-breakdown {
+  display: grid;
+  gap: 22px;
+}
+.role-breakdown-item {
+  border-left: 1px solid var(--border);
+  padding-left: 18px;
+}
+.role-breakdown-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+.role-breakdown h5 {
+  margin: 0;
+  font-size: 15px;
+}
+.role-breakdown time {
+  padding-top: 0;
+  white-space: nowrap;
+}
 .timeline ul {
   list-style: none;
   padding: 0;
@@ -1197,6 +1220,10 @@ main,
   }
   .timeline article > div:last-child {
     grid-column: 2;
+  }
+  .role-breakdown-head {
+    display: grid;
+    gap: 4px;
   }
   .footer-bottom {
     display: flex;

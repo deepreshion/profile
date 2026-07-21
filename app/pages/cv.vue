@@ -9,6 +9,16 @@ const secondaryProjects = computed(() => cv.value.projects.slice(1, 3));
 const canonicalUrl = computed(() =>
   absoluteUrl(cvPagePaths[locale.value as keyof typeof cvPagePaths]),
 );
+const hasCvRoleBreakdown = (
+  job: (typeof cv.value.experience)[number],
+): job is (typeof cv.value.experience)[number] & {
+  roles: Array<{
+    years: string;
+    role: string;
+    achievements: readonly string[];
+    stack: string;
+  }>;
+} => "roles" in job;
 
 useSeoMeta({
   title: () => cv.value.title,
@@ -181,12 +191,37 @@ useHead({
           <p class="body">
             {{ job.summary }}
           </p>
-          <ul>
+          <div v-if="hasCvRoleBreakdown(job)" class="cv-role-breakdown">
+            <section
+              v-for="role in job.roles"
+              :key="`${job.company}-${role.years}-${role.role}`"
+              class="cv-role"
+            >
+              <div class="cv-role-head">
+                <h4>
+                  {{ role.role }}
+                </h4>
+                <span>
+                  {{ role.years }}
+                </span>
+              </div>
+              <ul>
+                <li v-for="achievement in role.achievements" :key="achievement">
+                  {{ achievement }}
+                </li>
+              </ul>
+              <div class="techline">
+                <b> {{ cv.stackLabel }}: </b>
+                {{ role.stack }}
+              </div>
+            </section>
+          </div>
+          <ul v-else>
             <li v-for="achievement in job.achievements" :key="achievement">
               {{ achievement }}
             </li>
           </ul>
-          <div class="techline">
+          <div v-if="'stack' in job" class="techline">
             <b> {{ cv.stackLabel }}: </b>
             {{ job.stack }}
           </div>
@@ -612,6 +647,32 @@ body:has(.cv-template) {
 .date {
   font-size: 8.5px;
   color: var(--muted);
+  white-space: nowrap;
+}
+.cv-role-breakdown {
+  display: grid;
+  gap: 3.2mm;
+  margin-top: 3mm;
+}
+.cv-role {
+  border-left: 1px solid var(--line);
+  padding-left: 4mm;
+}
+.cv-role-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 5mm;
+  align-items: baseline;
+  margin-bottom: 1.5mm;
+}
+.cv-role h4 {
+  margin: 0;
+  font-size: 10.2px;
+  color: #f1f1f1;
+}
+.cv-role-head span {
+  font-size: 8px;
+  color: var(--accent);
   white-space: nowrap;
 }
 .cv-template ul {
