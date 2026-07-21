@@ -992,9 +992,6 @@ main,
 }
 
 @media (max-width: 1050px) {
-  .hero {
-    grid-template-columns: 52% 48%;
-  }
   .profile-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -1034,7 +1031,7 @@ main,
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1279px) {
   .site-header {
     height: 72px;
     grid-template-columns: 1fr auto auto;
@@ -1060,12 +1057,12 @@ main,
   .header-actions {
     justify-self: end;
   }
-  .cv-link {
-    display: none;
-  }
   .menu-button {
     display: block;
   }
+}
+
+@media (max-width: 1079px) {
   .hero {
     grid-template-columns: 1fr;
   }
@@ -1080,9 +1077,13 @@ main,
     font-size: clamp(62px, 18vw, 90px);
   }
   .hero-visual {
-    min-height: 580px;
-    border-left: 0;
-    border-top: 1px solid var(--border);
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .cv-link {
+    display: none;
   }
   .profile-grid {
     grid-template-columns: 1fr;

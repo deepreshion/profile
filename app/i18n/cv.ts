@@ -12,7 +12,7 @@ export const cvMessages = {
     portraitAlt: 'Black and white portrait of Ruslan Vorontsov',
     format: 'Format',
     formatValue: 'Remote · International team',
-    summary: '6+ years building corporate web applications, CMS products and B2B platforms with Vue, TypeScript, scalable architecture, practical test automation and AI-assisted engineering workflows. My background combines hands-on Vue and TypeScript development, architecture decisions, migrations from legacy stacks, testing processes, AI-assisted automation and close work with analysts and QA.',
+    summary: '6+ years building corporate web applications, CMS products and B2B platforms with Vue and TypeScript, focused on architecture, practical test automation and AI-assisted workflows. My commercial experience combines architecture decisions, migrations from legacy stacks, frontend regression protection, automation through AI agents and close work with analysts and QA.',
     metrics: [
       { value: '6+', label: 'years of commercial experience' },
       { value: '25+', label: 'commercial projects' },

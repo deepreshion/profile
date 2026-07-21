@@ -2,6 +2,7 @@ const appBaseURL = process.env.GITHUB_ACTIONS ? '/profile/' : '/'
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
+  buildDir: '.nuxt',
   devtools: { enabled: false },
   modules: ['@vueuse/motion/nuxt', '@nuxtjs/i18n', '@nuxt/eslint'],
   css: ['~/assets/css/main.css'],

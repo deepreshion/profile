@@ -27,7 +27,7 @@ export const portfolioMessages = {
       lastName: 'Vorontsov',
       role: 'Senior Frontend Engineer',
       techLine: ['Vue.js', 'Nuxt', 'TypeScript'],
-      lede: '6+ years building corporate web applications, CMS products and B2B platforms with Vue, TypeScript, scalable architecture, practical test automation and AI-assisted engineering workflows.',
+      lede: '6+ years building corporate web applications, CMS products and B2B platforms with Vue and TypeScript, focused on practicality and quality.',
       projectsCta: 'View projects',
       contactCta: 'Contact me',
       portraitAlt: 'Black and white portrait of Ruslan Vorontsov',
@@ -46,38 +46,34 @@ export const portfolioMessages = {
       capabilitiesTitle: 'Capabilities',
       projectsKicker: 'Selected work',
       projectsTitle: 'Projects with purpose.',
-      projectsText: 'Selected projects from CMS, B2B, infrastructure and personal product work.',
+      projectsText: 'Selected projects that influenced me the most, gave me experience or created growth points.',
       experienceKicker: 'Experience',
       experienceTitle: '6+ years in frontend engineering.',
       experienceText: 'Corporate applications, admin systems, CMS, B2B platforms and infrastructure services built with Vue and TypeScript.'
     },
     projects: [
       { number: '01', title: 'Code-first CMS', description: 'A Symfony-bundle CMS with metadata-driven admin sections, dynamic form rendering and Vite-based frontend delivery. New admin sections moved from days of custom frontend work to hours.', stack: ['Vue 3', 'TypeScript', 'Vite', 'Symfony'], tone: 'lime' },
-      { number: '02', title: 'OptiFit Workout Tracker', description: 'A self-built workout tracking app for strength training, cardio and activity logs, prepared for Telegram Mini Apps and a Capacitor mobile version.', stack: ['Vue 3', 'TypeScript', 'Quasar', 'Telegram Mini Apps'], tone: 'silver', source: 'https://github.com/deepreshion/opti-fit', url: 'https://deepreshion.github.io/opti-fit' },
-      { number: '03', title: 'City and Social Platforms', description: 'Infrastructure interfaces for Moscow city services with data-heavy dashboards, filters and tables focused on reliability, accessibility and broad public usage.', stack: ['Vue', 'TypeScript', 'Cypress', 'a11y'], tone: 'graphite' },
-      { number: '04', title: 'Frontend Modernization', description: 'Migration work across legacy projects from Webpack to Vite and from Vue 2 to Vue 3, improving local development and release confidence without stopping business workflows.', stack: ['Vue 3', 'Vite', 'Vitest', 'Cypress'], tone: 'olive' }
+      { number: '02', title: 'OptiFit Workout Tracker', description: 'A self-built workout tracking app for strength training, cardio and activity logs, prepared for Telegram Mini Apps and a Capacitor mobile version.', stack: ['Vue 3', 'Quasar', 'Pinia', 'Telegram Mini Apps'], tone: 'silver', source: 'https://github.com/deepreshion/opti-fit', url: 'https://deepreshion.github.io/opti-fit'  },
+      // { number: '03', title: 'City and Social Platforms', description: 'Infrastructure interfaces for Moscow city services: data-heavy dashboards, filters and tables focused on reliability, accessibility and broad public usage.', stack: ['Vue', 'TypeScript', 'Cypress', 'a11y'], tone: 'graphite' },
+      // { number: '04', title: 'Frontend Modernization', description: 'Migration work across legacy projects from Webpack to Vite and from Vue 2 to Vue 3, improving local development and release confidence without stopping business workflows.', stack: ['Vue 3', 'Vite', 'Vitest', 'Cypress'], tone: 'olive' }
     ],
     projectLinks: { github: 'on GitHub', discuss: 'Discuss' },
     workCases: [
       {
-        title: 'Vue 2 to Vue 3 migration',
-        text: 'Moved routing, state and component layers step by step while keeping active features releasable.'
+        title: 'Project migration',
+        text: 'Updated projects from Vue 2 to Vue 3 step by step while keeping current tasks releasable.'
       },
       {
-        title: 'Build and release acceleration',
-        text: 'Removed slow points in dev and build pipelines so changes could be checked and shipped faster.'
+        title: 'Faster code delivery to production',
+        text: 'Removed bottlenecks in the dev/build pipeline so changes could be checked faster and brought to release.'
       },
       {
-        title: 'Risk-based test scenarios',
-        text: 'Covered fragile paths around permissions, forms, navigation and data updates.'
-      },
-      {
-        title: 'AI-assisted engineering automation',
-        text: 'Use coding agents to speed up codebase research, refactoring support, test scaffolding, documentation and routine delivery checks.'
+        title: 'Tests around risky scenarios',
+        text: 'Covered access rights, forms, section transitions and data updates.'
       },
       {
         title: 'Long-lived codebase support',
-        text: 'Improved existing code without breaking familiar business flows for users and teams.'
+        text: 'Improved the existing codebase without breaking familiar business processes.'
       }
     ],
     experience: [
@@ -99,15 +95,14 @@ export const portfolioMessages = {
         achievements: [
           'Worked on an Angular and DevExtreme web application as an early-career frontend engineer',
           'Redesigned existing user interfaces and improved UI behavior',
-          'Used Angular, TypeScript, CSS, Tailwind and DevExtreme'
         ]
       }
     ],
     stats: {
       ariaLabel: 'Engineering stats',
-      heading: 'Core stats',
-      value: '6+ YRS',
-      items: [['Frontend', 95], ['Architecture', 92], ['Testing', 88], ['Performance', 90], ['Leadership', 86], ['Problem Solving', 94], ['Communication', 86]]
+      heading: 'Skills',
+      value: '6+ YEARS',
+      items: [['Technical skills', 95], ['Architectural thinking', 90], ['Testing', 85], ['Security', 80], ['Performance', 95], ['Process management', 80], ['Problem solving', 90], ['Communication', 80]]
     },
     capabilities: [
       { icon: 'code', title: 'Frontend delivery', text: 'Full-cycle development of corporate web apps, admin panels, CMS and B2B platforms.' },
