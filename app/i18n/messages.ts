@@ -14,7 +14,6 @@ export const portfolioMessages = {
       languageLabel: 'Select language',
       links: [
         { label: 'About', href: '#about' },
-        { label: 'Work cases', href: '#skills' },
         { label: 'Focus', href: '#interests' },
         { label: 'Projects', href: '#projects' },
         { label: 'Experience', href: '#experience' },
@@ -170,7 +169,6 @@ export const portfolioMessages = {
       languageLabel: 'Выбор языка',
       links: [
         { label: 'Обо мне', href: '#about' },
-        { label: 'Рабочие кейсы', href: '#skills' },
         { label: 'Фокус', href: '#interests' },
         { label: 'Проекты', href: '#projects' },
         { label: 'Опыт', href: '#experience' },
