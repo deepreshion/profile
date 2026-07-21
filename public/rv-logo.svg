@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 36" role="img" aria-labelledby="title">
+  <title id="title">RV.</title>
+  <path fill="#f5f5f5" d="M3 4h15.4c8.2 0 13.3 4.4 13.3 11.3 0 4.9-2.6 8.4-7 10.1L33 32h-8.8l-7.3-5.9H10.5V32H3V4Zm15.1 15.5c3.8 0 6.1-1.5 6.1-4.1 0-2.8-2.3-4.3-6.1-4.3h-7.6v8.4h7.6Z"/>
+  <path fill="#f5f5f5" d="M30.6 4h8.5l9.2 19 9.2-19H66L51.9 32h-7.2L30.6 4Z"/>
+  <circle cx="64" cy="28.4" r="3.6" fill="#b7d84b"/>
+</svg>

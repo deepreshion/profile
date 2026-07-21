@@ -22,17 +22,6 @@ const withIcon = <T extends { icon: string }>(item: T): IconItem<Omit<T, 'icon'>
   icon: iconMap[item.icon as IconKey]
 })
 
-const sharedSkills = [
-  ['Frontend Architecture', 92],
-  ['Platform Engineering', 90],
-  ['Testing & QA Automation', 88],
-  ['Technical Leadership', 90],
-  ['Performance Optimization', 88],
-  ['Code Review & Mentoring', 85],
-  ['Legacy Modernization', 87],
-  ['Technical Planning', 88]
-] as const
-
 const sharedTechnologies = ['Vue.js', 'Nuxt', 'TypeScript', 'JavaScript', 'HTML', 'CSS', 'Vite', 'Pinia', 'Quasar', 'DevExtreme', 'Vitest', 'Cypress']
 
 export const usePortfolioContent = () => {
@@ -44,7 +33,7 @@ export const usePortfolio = () => {
   const content = usePortfolioContent()
 
   return {
-    skills: sharedSkills,
+    workCases: computed(() => content.value.workCases),
     technologies: sharedTechnologies,
     projects: computed(() => content.value.projects),
     experience: computed(() => content.value.experience),

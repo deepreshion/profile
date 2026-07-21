@@ -3,10 +3,10 @@ const appBaseURL = process.env.GITHUB_ACTIONS ? '/profile/' : '/'
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
-  modules: ['@vueuse/motion/nuxt', '@nuxtjs/i18n'],
+  modules: ['@vueuse/motion/nuxt', '@nuxtjs/i18n', '@nuxt/eslint'],
   css: ['~/assets/css/main.css'],
   i18n: {
-    strategy: 'no_prefix',
+    strategy: 'prefix_except_default',
     defaultLocale: 'en',
     locales: [
       { code: 'en', language: 'en-US', name: 'English' },
@@ -21,7 +21,7 @@ export default defineNuxtConfig({
   },
   nitro: {
     prerender: {
-      routes: ['/cv']
+      routes: ['/cv', '/ru', '/ru/cv']
     }
   },
   app: {
@@ -36,6 +36,9 @@ export default defineNuxtConfig({
         { property: 'og:description', content: 'Building thoughtful, scalable web applications.' },
         { property: 'og:type', content: 'website' },
         { property: 'og:image', content: `${appBaseURL}images/my-portrait.png` }
+      ],
+      link: [
+        { rel: 'icon', type: 'image/svg+xml', href: `${appBaseURL}rv-logo.svg` }
       ]
     }
   }

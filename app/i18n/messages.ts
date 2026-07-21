@@ -4,7 +4,7 @@ export const portfolioMessages = {
   en: {
     seo: {
       title: 'Ruslan Vorontsov - Senior Frontend Engineer',
-      description: 'Senior Frontend Engineer with 6+ years of experience in Vue, Nuxt, TypeScript, CMS, B2B platforms, architecture and test automation.'
+      description: 'Senior Frontend Engineer with 6+ years of experience in Vue, Nuxt, TypeScript, CMS, B2B platforms, architecture, test automation and AI-assisted engineering workflows.'
     },
     header: {
       backToTop: 'Back to top',
@@ -14,7 +14,7 @@ export const portfolioMessages = {
       languageLabel: 'Select language',
       links: [
         { label: 'About', href: '#about' },
-        { label: 'Skills', href: '#skills' },
+        { label: 'Work cases', href: '#skills' },
         { label: 'Focus', href: '#interests' },
         { label: 'Projects', href: '#projects' },
         { label: 'Experience', href: '#experience' },
@@ -27,7 +27,7 @@ export const portfolioMessages = {
       lastName: 'Vorontsov',
       role: 'Senior Frontend Engineer',
       techLine: ['Vue.js', 'Nuxt', 'TypeScript'],
-      lede: '6+ years building corporate web applications, CMS products and B2B platforms with Vue, TypeScript, scalable architecture and practical test automation.',
+      lede: '6+ years building corporate web applications, CMS products and B2B platforms with Vue, TypeScript, scalable architecture, practical test automation and AI-assisted engineering workflows.',
       projectsCta: 'View projects',
       contactCta: 'Contact me',
       portraitAlt: 'Black and white portrait of Ruslan Vorontsov',
@@ -37,8 +37,8 @@ export const portfolioMessages = {
       ariaLabel: 'Profile overview',
       aboutTitle: 'About me',
       aboutIntro: 'I build reliable frontend systems for business-critical web products.',
-      aboutText: 'My background combines hands-on Vue and TypeScript development, architecture decisions, migrations from legacy stacks, testing processes and close work with analysts and QA.',
-      skillsTitle: 'Skills',
+      aboutText: 'My background combines hands-on Vue and TypeScript development, architecture decisions, migrations from legacy stacks, testing processes, AI-assisted automation and close work with analysts and QA.',
+      skillsTitle: 'Work cases',
       technologiesTitle: 'Technologies'
     },
     sections: {
@@ -53,11 +53,33 @@ export const portfolioMessages = {
     },
     projects: [
       { number: '01', title: 'Code-first CMS', description: 'A Symfony-bundle CMS with metadata-driven admin sections, dynamic form rendering and Vite-based frontend delivery. New admin sections moved from days of custom frontend work to hours.', stack: ['Vue 3', 'TypeScript', 'Vite', 'Symfony'], tone: 'lime' },
-      { number: '02', title: 'OptiFit Workout Tracker', description: 'A self-built workout tracking app for strength training, cardio and activity logs, prepared for Telegram Mini Apps and a Capacitor mobile version.', stack: ['Vue 3', 'Quasar', 'Pinia', 'Telegram Mini Apps'], tone: 'silver', source: 'https://github.com/deepreshion' },
+      { number: '02', title: 'OptiFit Workout Tracker', description: 'A self-built workout tracking app for strength training, cardio and activity logs, prepared for Telegram Mini Apps and a Capacitor mobile version.', stack: ['Vue 3', 'TypeScript', 'Quasar', 'Telegram Mini Apps'], tone: 'silver', source: 'https://github.com/deepreshion/opti-fit', url: 'https://deepreshion.github.io/opti-fit' },
       { number: '03', title: 'City and Social Platforms', description: 'Infrastructure interfaces for Moscow city services with data-heavy dashboards, filters and tables focused on reliability, accessibility and broad public usage.', stack: ['Vue', 'TypeScript', 'Cypress', 'a11y'], tone: 'graphite' },
       { number: '04', title: 'Frontend Modernization', description: 'Migration work across legacy projects from Webpack to Vite and from Vue 2 to Vue 3, improving local development and release confidence without stopping business workflows.', stack: ['Vue 3', 'Vite', 'Vitest', 'Cypress'], tone: 'olive' }
     ],
     projectLinks: { github: 'on GitHub', discuss: 'Discuss' },
+    workCases: [
+      {
+        title: 'Vue 2 to Vue 3 migration',
+        text: 'Moved routing, state and component layers step by step while keeping active features releasable.'
+      },
+      {
+        title: 'Build and release acceleration',
+        text: 'Removed slow points in dev and build pipelines so changes could be checked and shipped faster.'
+      },
+      {
+        title: 'Risk-based test scenarios',
+        text: 'Covered fragile paths around permissions, forms, navigation and data updates.'
+      },
+      {
+        title: 'AI-assisted engineering automation',
+        text: 'Use coding agents to speed up codebase research, refactoring support, test scaffolding, documentation and routine delivery checks.'
+      },
+      {
+        title: 'Long-lived codebase support',
+        text: 'Improved existing code without breaking familiar business flows for users and teams.'
+      }
+    ],
     experience: [
       {
         years: 'Mar 2020 - Present',
@@ -66,7 +88,8 @@ export const portfolioMessages = {
         achievements: [
           'Built corporate web applications, admin systems, CMS products and B2B platforms with Vue 3 and TypeScript',
           'Acted as technical lead on 10+ of 25+ projects, shaping architecture and module decomposition',
-          'Introduced microfrontend architecture, E2E testing with Cypress and common code standards'
+          'Introduced microfrontend architecture, E2E testing with Cypress and common code standards',
+          'Used AI-assisted workflows and coding agents to automate codebase analysis, refactoring support, test scaffolding, documentation and delivery checks'
         ]
       },
       {
@@ -100,7 +123,7 @@ export const portfolioMessages = {
         { icon: 'rocket', title: 'Startups and early-stage products', text: 'Fast product cycles, direct ownership and room to shape core frontend decisions.' },
         { icon: 'gitFork', title: 'Open-source and developer tooling', text: 'Projects that improve engineering workflows and can grow through clear APIs and documentation.' },
         { icon: 'layers', title: 'Product engineering', text: 'Frontend work connected to business goals, user feedback and measurable product outcomes.' },
-        { icon: 'users', title: 'Technical responsibility', text: 'Architecture, standards and delivery practices that help teams move faster without losing quality.' }
+        { icon: 'users', title: 'AI-assisted engineering automation', text: 'Using coding agents to accelerate routine engineering work while keeping architecture, review and final responsibility under engineer control.' }
       ]
     },
     details: [
@@ -119,7 +142,7 @@ export const portfolioMessages = {
   ru: {
     seo: {
       title: 'Руслан Воронцов - Senior Frontend Engineer',
-      description: 'Senior Frontend Engineer с опытом 6+ лет во Vue, Nuxt, TypeScript, CMS, B2B-платформах, архитектуре и автоматизации тестирования.'
+      description: 'Senior Frontend Engineer с опытом 6+ лет во Vue, Nuxt, TypeScript, CMS, B2B-платформах, архитектуре, автоматизации тестирования и AI-assisted engineering workflows.'
     },
     header: {
       backToTop: 'Наверх',
@@ -129,7 +152,7 @@ export const portfolioMessages = {
       languageLabel: 'Выбор языка',
       links: [
         { label: 'Обо мне', href: '#about' },
-        { label: 'Навыки', href: '#skills' },
+        { label: 'Рабочие кейсы', href: '#skills' },
         { label: 'Фокус', href: '#interests' },
         { label: 'Проекты', href: '#projects' },
         { label: 'Опыт', href: '#experience' },
@@ -152,8 +175,8 @@ export const portfolioMessages = {
       ariaLabel: 'Обзор профиля',
       aboutTitle: 'Обо мне',
       aboutIntro: 'Создаю надежные фронтенд-системы для бизнес-критичных веб-продуктов.',
-      aboutText: 'Мой опыт объединяет практическую разработку на Vue и TypeScript, архитектурные решения, миграции с легаси-стеков, тестовые процессы и плотную работу с аналитиками и QA.',
-      skillsTitle: 'Навыки',
+      aboutText: 'Мой опыт объединяет практическую разработку на Vue и TypeScript, архитектурные решения, миграции с легаси-стеков, тестовые процессы, автоматизацию через AI-агентов и плотную работу с аналитиками и QA.',
+      skillsTitle: 'Рабочие кейсы',
       technologiesTitle: 'Технологии'
     },
     sections: {
@@ -161,18 +184,36 @@ export const portfolioMessages = {
       capabilitiesTitle: 'Компетенции',
       projectsKicker: 'Избранные работы',
       projectsTitle: 'Проекты с понятной целью.',
-      projectsText: 'Подборка проектов из CMS, B2B, инфраструктурных интерфейсов и личной продуктовой разработки.',
+      projectsText: 'Подборка проектов, которые больше всего на меня повлияли, дали опыт или точки роста.',
       experienceKicker: 'Опыт',
       experienceTitle: '6+ лет во фронтенд-разработке.',
       experienceText: 'Корпоративные приложения, админ-системы, CMS, B2B-платформы и инфраструктурные сервисы на Vue и TypeScript.'
     },
     projects: [
       { number: '01', title: 'Code-first CMS', description: 'CMS в виде Symfony-бандла с админ-разделами на основе метаданных, динамическим рендерингом форм и фронтендом на Vite. Создание новых админ-разделов ускорилось с дней кастомной разработки до часов.', stack: ['Vue 3', 'TypeScript', 'Vite', 'Symfony'], tone: 'lime' },
-      { number: '02', title: 'OptiFit Workout Tracker', description: 'Собственное приложение для учета силовых тренировок, кардио и активности, подготовленное для Telegram Mini Apps и мобильной версии на Capacitor.', stack: ['Vue 3', 'Quasar', 'Pinia', 'Telegram Mini Apps'], tone: 'silver', source: 'https://github.com/deepreshion' },
-      { number: '03', title: 'Городские и социальные платформы', description: 'Инфраструктурные интерфейсы для городских сервисов Москвы: насыщенные данными дашборды, фильтры и таблицы с фокусом на надежность, доступность и массовое использование.', stack: ['Vue', 'TypeScript', 'Cypress', 'a11y'], tone: 'graphite' },
-      { number: '04', title: 'Модернизация фронтенда', description: 'Миграции легаси-проектов с Webpack на Vite и с Vue 2 на Vue 3, улучшающие локальную разработку и надежность релизов без остановки бизнес-процессов.', stack: ['Vue 3', 'Vite', 'Vitest', 'Cypress'], tone: 'olive' }
+      { number: '02', title: 'OptiFit Workout Tracker', description: 'Собственное приложение для учета силовых тренировок, кардио и активности, подготовленное для Telegram Mini Apps и мобильной версии на Capacitor.', stack: ['Vue 3', 'Quasar', 'Pinia', 'Telegram Mini Apps'], tone: 'silver', source: 'https://github.com/deepreshion/opti-fit', url: 'https://deepreshion.github.io/opti-fit'  },
+      // { number: '03', title: 'Городские и социальные платформы', description: 'Инфраструктурные интерфейсы для городских сервисов Москвы: насыщенные данными дашборды, фильтры и таблицы с фокусом на надежность, доступность и массовое использование.', stack: ['Vue', 'TypeScript', 'Cypress', 'a11y'], tone: 'graphite' },
+      // { number: '04', title: 'Модернизация фронтенда', description: 'Миграции легаси-проектов с Webpack на Vite и с Vue 2 на Vue 3, улучшающие локальную разработку и надежность релизов без остановки бизнес-процессов.', stack: ['Vue 3', 'Vite', 'Vitest', 'Cypress'], tone: 'olive' }
     ],
     projectLinks: { github: 'на GitHub', discuss: 'Обсудить' },
+    workCases: [
+      {
+        title: 'Миграция проектов',
+        text: 'Поэтапное обновление проектов с Vue 2 на Vue 3, сохраняя возможность выпускать текущие задачи.'
+      },
+      {
+        title: 'Ускорение доставки кода на прод',
+        text: 'Убирал узкие места в dev/build pipeline, чтобы быстрее проверять изменения и доводить их до релиза.'
+      },
+      {
+        title: 'Тесты вокруг рискованных сценариев',
+        text: 'Покрывал права доступа, формы, переходы между разделами и обновление данных.'
+      },
+      {
+        title: 'Поддержка долгоживущего кода',
+        text: 'Улучшал существующую кодовую базу без поломки привычных бизнес-процессов.'
+      }
+    ],
     experience: [
       {
         years: 'Март 2020 - сейчас',
@@ -181,7 +222,8 @@ export const portfolioMessages = {
         achievements: [
           'Разрабатывал корпоративные веб-приложения, админ-системы, CMS-продукты и B2B-платформы на Vue 3 и TypeScript',
           'Выступал техническим лидером на 10+ из 25+ проектов, определяя архитектуру и декомпозицию модулей',
-          'Внедрял микрофронтенд-архитектуру, E2E-тестирование на Cypress и общие стандарты кода'
+          'Внедрял микрофронтенд-архитектуру, E2E-тестирование на Cypress и общие стандарты кода',
+          'Использовал AI-assisted workflows и coding agents для автоматизации анализа кодовой базы, поддержки рефакторинга, подготовки тестов, документации и delivery-проверок'
         ]
       },
       {
@@ -191,15 +233,14 @@ export const portfolioMessages = {
         achievements: [
           'Работал над веб-приложением на Angular и DevExtreme на старте фронтенд-карьеры',
           'Редизайнил существующие интерфейсы и улучшал поведение UI',
-          'Использовал Angular, TypeScript, CSS, Tailwind и DevExtreme'
         ]
       }
     ],
     stats: {
       ariaLabel: 'Инженерные показатели',
-      heading: 'Ключевые навыки',
+      heading: 'Навыки',
       value: '6+ ЛЕТ',
-      items: [['Frontend', 95], ['Architecture', 92], ['Testing', 88], ['Performance', 90], ['Leadership', 86], ['Problem Solving', 94], ['Communication', 86]]
+      items: [['Технические умения', 95], ['Архитектурное мышление', 90], ['Тестирование', 85], ['Безопасность', 80], ['Производительность', 95], ['Управление процессами', 80], ['Решение проблем', 90], ['Коммуникация', 80]]
     },
     capabilities: [
       { icon: 'code', title: 'Фронтенд под ключ', text: 'Полный цикл разработки корпоративных веб-приложений, админ-панелей, CMS и B2B-платформ.' },
@@ -215,7 +256,7 @@ export const portfolioMessages = {
         { icon: 'rocket', title: 'Стартапы и early-stage продукты', text: 'Быстрые продуктовые циклы, личная ответственность и возможность влиять на ключевые фронтенд-решения.' },
         { icon: 'gitFork', title: 'Open-source и developer tooling', text: 'Проекты, которые улучшают инженерные процессы и растут через понятные API и документацию.' },
         { icon: 'layers', title: 'Продуктовая инженерия', text: 'Фронтенд, связанный с бизнес-целями, пользовательской обратной связью и измеримым результатом.' },
-        { icon: 'users', title: 'Техническая ответственность', text: 'Архитектура, стандарты и практики разработки, которые помогают командам двигаться быстрее без потери качества.' }
+        { icon: 'users', title: 'Автоматизация разработки через AI-агентов', text: 'Использование AI для ускорения рутинной инженерной работы при сохранении архитектурных решений, ревью и финальной ответственности за инженером.' }
       ]
     },
     details: [

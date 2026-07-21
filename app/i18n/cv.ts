@@ -12,7 +12,7 @@ export const cvMessages = {
     portraitAlt: 'Black and white portrait of Ruslan Vorontsov',
     format: 'Format',
     formatValue: 'Remote · International team',
-    summary: '6+ years building corporate web applications, CMS products and B2B platforms with Vue, TypeScript, scalable architecture and practical test automation. My background combines hands-on Vue and TypeScript development, architecture decisions, migrations from legacy stacks, testing processes and close work with analysts and QA.',
+    summary: '6+ years building corporate web applications, CMS products and B2B platforms with Vue, TypeScript, scalable architecture, practical test automation and AI-assisted engineering workflows. My background combines hands-on Vue and TypeScript development, architecture decisions, migrations from legacy stacks, testing processes, AI-assisted automation and close work with analysts and QA.',
     metrics: [
       { value: '6+', label: 'years of commercial experience' },
       { value: '25+', label: 'commercial projects' },
@@ -25,6 +25,7 @@ export const cvMessages = {
       'Vue, TypeScript, microfrontends and modular systems built for independent team delivery.',
       'Migration work across legacy projects from Webpack to Vite and from Vue 2 to Vue 3, improving local development and release confidence.',
       'Smoke and E2E test coverage that catches regressions before production releases.',
+      'AI-assisted workflows and coding agents used for codebase analysis, refactoring support, test scaffolding, documentation and delivery checks.',
       'Introduced microfrontend architecture, E2E testing with Cypress and common code standards.',
       'Architecture decisions, code standards and close collaboration with analysts and QA.',
       'Hands-on Vue and TypeScript development, architecture decisions, migrations from legacy stacks, testing processes and close work with analysts and QA.'
@@ -42,7 +43,8 @@ export const cvMessages = {
         summary: 'Built corporate web applications, admin systems, CMS products and B2B platforms with Vue 3 and TypeScript.',
         achievements: [
           'Acted as technical lead on 10+ of 25+ projects, shaping architecture and module decomposition.',
-          'Introduced microfrontend architecture, E2E testing with Cypress and common code standards.'
+          'Introduced microfrontend architecture, E2E testing with Cypress and common code standards.',
+          'Used AI-assisted workflows and coding agents to automate codebase analysis, refactoring support, test scaffolding, documentation and delivery checks.'
         ],
         stack: 'Vue.js 3, TypeScript, JavaScript, Vite, Vue Router, Pinia, Vuex, Quasar, DevExtreme, Vitest, Cypress'
       },
@@ -108,7 +110,7 @@ export const cvMessages = {
     portraitAlt: 'Черно-белый портрет Руслана Воронцова',
     format: 'Формат',
     formatValue: 'Удаленно · международная команда',
-    summary: '6+ лет создаю корпоративные веб-приложения, CMS-продукты и B2B-платформы на Vue и TypeScript с фокусом на архитектуру и практичную автоматизацию тестирования. Мой коммерческий опыт объединяет архитектурные решения, миграции с легаси-стеков, защиту фронтенда от регрессии и плотную работу с аналитиками и QA.',
+    summary: '6+ лет создаю корпоративные веб-приложения, CMS-продукты и B2B-платформы на Vue и TypeScript с фокусом на архитектуру, практичную автоматизацию тестирования и AI-assisted workflows. Мой коммерческий опыт объединяет архитектурные решения, миграции с легаси-стеков, защиту фронтенда от регрессии, автоматизацию через AI-агентов и плотную работу с аналитиками и QA.',
     metrics: [
       { value: '6+', label: 'лет коммерческого опыта' },
       { value: '25+', label: 'коммерческих проектов' },
@@ -121,6 +123,7 @@ export const cvMessages = {
       'Vue, TypeScript, микрофронтенды и модульные системы для независимой работы команд.',
       'Миграции legacy-проектов с Webpack на Vite и с Vue 2 на Vue 3, улучшающие локальную разработку и надежность релизов.',
       'Smoke- и E2E-покрытие, которое ловит регрессии до production-релизов.',
+      'AI-assisted workflows и coding agents для анализа кодовой базы, поддержки рефакторинга, подготовки тестов, документации и delivery-проверок.',
       'Внедрял микрофронтенд-архитектуру, E2E-тестирование на Cypress и общие стандарты кода.',
       'Архитектурные решения, стандарты кода и плотная работа с аналитиками и QA.',
       'Мой опыт объединяет практическую разработку на Vue и TypeScript, архитектурные решения, миграции с легаси-стеков, тестовые процессы и плотную работу с аналитиками и QA.'
@@ -138,7 +141,8 @@ export const cvMessages = {
         summary: 'Разрабатывал корпоративные веб-приложения, админ-системы, CMS-продукты и B2B-платформы на Vue 3 и TypeScript.',
         achievements: [
           'Выступал техническим лидером на 10+ из 25+ проектов, определяя архитектуру и декомпозицию модулей.',
-          'Внедрял микрофронтенд-архитектуру, E2E-тестирование на Cypress и общие стандарты кода.'
+          'Внедрял микрофронтенд-архитектуру, E2E-тестирование на Cypress и общие стандарты кода.',
+          'Использовал AI-assisted workflows и coding agents для автоматизации анализа кодовой базы, поддержки рефакторинга, подготовки тестов, документации и delivery-проверок.'
         ],
         stack: 'Vue.js 3, TypeScript, JavaScript, Vite, Vue Router, Pinia, Vuex, Quasar, DevExtreme, Vitest, Cypress'
       },
