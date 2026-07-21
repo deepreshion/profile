@@ -6,12 +6,36 @@ const baseURL = useRuntimeConfig().app.baseURL;
 const cv = computed(() => cvMessages[locale.value as CvLocale]);
 const primaryProject = computed(() => cv.value.projects[0]);
 const secondaryProjects = computed(() => cv.value.projects.slice(1, 3));
+const canonicalUrl = computed(() =>
+  absoluteUrl(cvPagePaths[locale.value as keyof typeof cvPagePaths]),
+);
+
+useSeoMeta({
+  title: () => cv.value.title,
+  description: () => cv.value.summary,
+  ogTitle: () => cv.value.title,
+  ogDescription: () => cv.value.summary,
+  ogType: "profile",
+  ogUrl: () => canonicalUrl.value,
+  ogSiteName: siteName,
+  ogImage: seoImageUrl,
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  ogImageType: "image/png",
+  twitterCard: "summary_large_image",
+  twitterTitle: () => cv.value.title,
+  twitterDescription: () => cv.value.summary,
+  twitterImage: seoImageUrl,
+});
 
 useHead({
   htmlAttrs: {
     lang: () => locale.value,
   },
-  title: () => cv.value.title,
+  link: () => [
+    { rel: "canonical", href: canonicalUrl.value },
+    ...localeAlternates(cvPagePaths),
+  ],
 });
 </script>
 

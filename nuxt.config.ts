@@ -1,4 +1,5 @@
 const appBaseURL = process.env.GITHUB_ACTIONS ? '/profile/' : '/'
+const siteUrl = 'https://deepreshion.github.io/profile'
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
@@ -6,6 +7,11 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   modules: ['@vueuse/motion/nuxt', '@nuxtjs/i18n', '@nuxt/eslint'],
   css: ['~/assets/css/main.css'],
+  runtimeConfig: {
+    public: {
+      siteUrl
+    }
+  },
   i18n: {
     strategy: 'prefix_except_default',
     defaultLocale: 'en',
@@ -36,7 +42,13 @@ export default defineNuxtConfig({
         { property: 'og:title', content: 'Ruslan Vorontsov - Senior Frontend Engineer' },
         { property: 'og:description', content: 'Building thoughtful, scalable web applications.' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:image', content: `${appBaseURL}images/my-portrait.png` }
+        { property: 'og:site_name', content: 'Ruslan Vorontsov Portfolio' },
+        { property: 'og:image', content: `${siteUrl}/og-image.png` },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
+        { property: 'og:image:type', content: 'image/png' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:image', content: `${siteUrl}/og-image.png` }
       ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: `${appBaseURL}rv-logo.svg` }

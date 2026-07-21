@@ -151,7 +151,12 @@ const techItems = computed(() =>
             :style="{ '--tech-color': tech.logo.color }"
             aria-hidden="true"
           >
-            <img :src="tech.logo.src" alt="" loading="lazy" decoding="async" />
+            <img
+              :src="tech.logo.src"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
           </span>
           <strong>
             {{ tech.name }}
