@@ -3,6 +3,9 @@ import { ArrowUpRight, Github } from "lucide-vue-next";
 
 const { projects } = usePortfolio();
 const content = usePortfolioContent();
+const baseURL = useRuntimeConfig().app.baseURL;
+
+const imageSrc = (path: string) => `${baseURL}${path.replace(/^\/+/, "")}`;
 </script>
 
 <template>
@@ -43,7 +46,7 @@ const content = usePortfolioContent();
           >
             <img
               v-if="project.image"
-              :src="project.image"
+              :src="imageSrc(project.image)"
               :alt="project.title"
               loading="lazy"
             />
