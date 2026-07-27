@@ -126,12 +126,9 @@ useHead({
         </div>
         <div class="achievements">
           <div
-            v-for="(achievement, index) in cv.achievements"
+            v-for="achievement in cv.achievements"
             :key="achievement"
             class="achievement"
-            :class="{
-              'achievement-wide': index === cv.achievements.length - 1,
-            }"
           >
             {{ achievement }}
           </div>
@@ -285,76 +282,76 @@ useHead({
       </div>
     </section>
 
-    <section class="page">
-      <div class="kicker">
-        {{ cv.selectedProjects }}
-      </div>
-      <div class="section-title" style="margin-top: 7mm;">
-        <h2>
-          {{ cv.selectedProjects }}
-        </h2>
-      </div>
+    <!--    <section class="page">-->
+    <!--      <div class="kicker">-->
+    <!--        {{ cv.selectedProjects }}-->
+    <!--      </div>-->
+    <!--      <div class="section-title" style="margin-top: 7mm;">-->
+    <!--        <h2>-->
+    <!--          {{ cv.selectedProjects }}-->
+    <!--        </h2>-->
+    <!--      </div>-->
 
-      <div v-if="primaryProject" class="project featured">
-        <h3>
-          {{ primaryProject.title }}
-        </h3>
-        <div class="role">
-          {{ primaryProject.role }}
-        </div>
-        <p class="body">
-          {{ primaryProject.description }}
-        </p>
-        <div class="flow">
-          <span> PHP metadata </span>
-          <i> → </i>
-          <span> JSON schema </span>
-          <i> → </i>
-          <span> Dynamic Vue components </span>
-          <i> → </i>
-          <span> Validation </span>
-          <i> → </i>
-          <span> Ready UI </span>
-        </div>
-        <div class="techline">
-          <b> {{ cv.responsibility }}: </b>
-          {{ cv.responsibilityValue }}
-        </div>
-      </div>
+    <!--      <div v-if="primaryProject" class="project featured">-->
+    <!--        <h3>-->
+    <!--          {{ primaryProject.title }}-->
+    <!--        </h3>-->
+    <!--        <div class="role">-->
+    <!--          {{ primaryProject.role }}-->
+    <!--        </div>-->
+    <!--        <p class="body">-->
+    <!--          {{ primaryProject.description }}-->
+    <!--        </p>-->
+    <!--        <div class="flow">-->
+    <!--          <span> PHP metadata </span>-->
+    <!--          <i> → </i>-->
+    <!--          <span> JSON schema </span>-->
+    <!--          <i> → </i>-->
+    <!--          <span> Dynamic Vue components </span>-->
+    <!--          <i> → </i>-->
+    <!--          <span> Validation </span>-->
+    <!--          <i> → </i>-->
+    <!--          <span> Ready UI </span>-->
+    <!--        </div>-->
+    <!--        <div class="techline">-->
+    <!--          <b> {{ cv.responsibility }}: </b>-->
+    <!--          {{ cv.responsibilityValue }}-->
+    <!--        </div>-->
+    <!--      </div>-->
 
-      <div class="two-col-projects">
-        <div
-          v-for="project in secondaryProjects"
-          :key="project.number"
-          class="project"
-        >
-          <h3>
-            {{ project.title }}
-          </h3>
-          <div class="role">
-            {{ project.role }}
-          </div>
-          <p class="small muted">
-            {{ project.description }}
-          </p>
-          <div class="techline">
-            <b> {{ cv.stackLabel }}: </b>
-            {{ project.stack.join(", ") }}
-          </div>
-          <div v-if="project.github" class="techline">
-            <b> GitHub: </b>
-            {{ project.github }}
-          </div>
-        </div>
-      </div>
+    <!--      <div class="two-col-projects">-->
+    <!--        <div-->
+    <!--          v-for="project in secondaryProjects"-->
+    <!--          :key="project.number"-->
+    <!--          class="project"-->
+    <!--        >-->
+    <!--          <h3>-->
+    <!--            {{ project.title }}-->
+    <!--          </h3>-->
+    <!--          <div class="role">-->
+    <!--            {{ project.role }}-->
+    <!--          </div>-->
+    <!--          <p class="small muted">-->
+    <!--            {{ project.description }}-->
+    <!--          </p>-->
+    <!--          <div class="techline">-->
+    <!--            <b> {{ cv.stackLabel }}: </b>-->
+    <!--            {{ project.stack.join(", ") }}-->
+    <!--          </div>-->
+    <!--          <div v-if="project.github" class="techline">-->
+    <!--            <b> GitHub: </b>-->
+    <!--            {{ project.github }}-->
+    <!--          </div>-->
+    <!--        </div>-->
+    <!--      </div>-->
 
-      <div class="note">
-        {{ cv.note }}
-      </div>
-      <div class="page-no">
-        03
-      </div>
-    </section>
+    <!--      <div class="note">-->
+    <!--        {{ cv.note }}-->
+    <!--      </div>-->
+    <!--      <div class="page-no">-->
+    <!--        03-->
+    <!--      </div>-->
+    <!--    </section>-->
   </main>
 </template>
 

@@ -22,13 +22,11 @@ export const cvMessages = {
     achievementsTitle: 'Key achievements',
     achievements: [
       'Acted as technical lead on 10+ of 25+ projects, defining architecture and module decomposition.',
-      'Vue, TypeScript, microfrontends and modular systems built for independent team delivery.',
       'Migration work across legacy projects from Webpack to Vite and from Vue 2 to Vue 3, improving local development and release confidence.',
       'Smoke and E2E test coverage that catches regressions before production releases.',
       'AI-assisted workflows and coding agents used for codebase analysis, refactoring support, test scaffolding, documentation and delivery checks.',
-      'Introduced microfrontend architecture, E2E testing with Cypress and common code standards.',
-      'Architecture decisions, code standards and close collaboration with analysts and QA.',
-      'Hands-on Vue and TypeScript development, architecture decisions, migrations from legacy stacks, testing processes and close work with analysts and QA.'
+      'Introduced microfrontend architecture for independent team delivery on large projects.',
+      'Actively collaborated with QA engineers at every stage of development, from reviewing test cases to joint bug analysis, contributing to higher release quality.'
     ],
     stackTitle: 'Technical stack',
     technologies: ['Vue.js 3', 'TypeScript', 'Nuxt', 'Vite', 'JavaScript', 'HTML', 'CSS', 'Pinia', 'Quasar', 'DevExtreme', 'Vitest', 'Cypress'],
@@ -146,13 +144,11 @@ export const cvMessages = {
     achievementsTitle: 'Ключевые достижения',
     achievements: [
       'Выступал техническим лидером на 10+ из 25+ проектов, определяя архитектуру и декомпозицию модулей.',
-      'Vue, TypeScript, микрофронтенды и модульные системы для независимой работы команд.',
       'Миграции legacy-проектов с Webpack на Vite и с Vue 2 на Vue 3, улучшающие локальную разработку и надежность релизов.',
       'Smoke- и E2E-покрытие, которое ловит регрессии до production-релизов.',
       'AI-assisted workflows и coding agents для анализа кодовой базы, поддержки рефакторинга, подготовки тестов, документации и delivery-проверок.',
-      'Внедрял микрофронтенд-архитектуру, E2E-тестирование на Cypress и общие стандарты кода.',
-      'Архитектурные решения, стандарты кода и плотная работа с аналитиками и QA.',
-      'Мой опыт объединяет практическую разработку на Vue и TypeScript, архитектурные решения, миграции с легаси-стеков, тестовые процессы и плотную работу с аналитиками и QA.'
+      'Внедрял микрофронтенд-архитектуру для независимой работы команд на больших проектах',
+      'Активно взаимодействовал с QA-инженерами на всех этапах разработки (от код-ревью тест-кейсов до совместного анализа багов), что способствовало повышению качества релизов.',
     ],
     stackTitle: 'Технический стек',
     technologies: ['Vue.js 3', 'TypeScript', 'Nuxt', 'Vite', 'JavaScript', 'HTML', 'CSS', 'Pinia', 'Quasar', 'DevExtreme', 'Vitest', 'Cypress'],
