@@ -36,10 +36,22 @@ const content = usePortfolioContent();
           <span>
             {{ project.number }}
           </span>
-          <div class="art-window" data-parallax-art>
-            <i />
-            <i />
-            <i />
+          <div
+            class="art-window"
+            :class="{ 'has-image': project.image }"
+            data-parallax-art
+          >
+            <img
+              v-if="project.image"
+              :src="project.image"
+              :alt="project.title"
+              loading="lazy"
+            />
+            <template v-else>
+              <i />
+              <i />
+              <i />
+            </template>
           </div>
         </div>
         <div class="project-body">
@@ -70,6 +82,7 @@ const content = usePortfolioContent();
                 <Github :size="17" />
               </a>
               <a
+                v-if="project.url"
                 :href="project.url ?? '#contact'"
                 :aria-label="`${content.projectLinks.discuss} ${project.title}`"
               >

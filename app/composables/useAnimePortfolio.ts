@@ -152,6 +152,7 @@ export const useAnimePortfolio = () => {
     document.querySelectorAll<HTMLElement>('[data-parallax-art]').forEach((art, index) => {
       const card = art.closest('[data-project-card]')
       if (!card) return
+      const hasImage = art.classList.contains('has-image')
       const scroll = onScroll({
         target: card,
         enter: 'bottom top',
@@ -160,7 +161,7 @@ export const useAnimePortfolio = () => {
       })
       scroll.link(play(art, {
         y: ['-8%', '8%'],
-        rotate: [index % 2 ? 3 : -3, index % 2 ? -2 : 2],
+        rotate: hasImage ? [0, 0] : [index % 2 ? 3 : -3, index % 2 ? -2 : 2],
         ease: 'linear',
       }))
       scrollObservers.push(scroll)

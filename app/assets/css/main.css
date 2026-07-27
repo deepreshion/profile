@@ -657,7 +657,6 @@ main,
 .projects {
   padding-top: 115px;
   padding-bottom: 130px;
-  background: rgba(20, 20, 20, 0.92);
   border-block: 1px solid var(--border);
 }
 .section-header {
@@ -697,6 +696,8 @@ main,
     box-shadow 0.35s ease;
   transform-style: preserve-3d;
   will-change: transform;
+  display: flex;
+  flex-direction: column;
 }
 .project-card:hover {
   transform: translateY(-7px);
@@ -704,7 +705,8 @@ main,
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
 }
 .project-art {
-  height: 285px;
+  min-height: 320px;
+  aspect-ratio: 16 / 9;
   border-radius: 17px;
   position: relative;
   overflow: hidden;
@@ -745,7 +747,7 @@ main,
 }
 .art-window {
   width: 62%;
-  height: 58%;
+  aspect-ratio: 16 / 10;
   position: relative;
   z-index: 1;
   border: 1px solid currentColor;
@@ -756,8 +758,24 @@ main,
   color: white;
   box-shadow: 20px 25px 50px rgba(0, 0, 0, 0.18);
   will-change: transform;
+  overflow: hidden;
 }
-.art-window::before {
+.art-window.has-image {
+  width: min(75%, 430px);
+  padding: 0;
+  transform: none;
+  border-color: rgba(17, 17, 17, 0.18);
+  background: transparent;
+  color: inherit;
+  border: none;
+}
+.art-window.has-image img {
+  display: block;
+  width: 100%;
+  object-fit: contain;
+  border-radius: inherit;
+}
+.art-window:not(.has-image)::before {
   content: "";
   display: block;
   width: 35%;
@@ -766,7 +784,7 @@ main,
   background: var(--accent);
   border-radius: 99px;
 }
-.art-window i {
+.art-window:not(.has-image) i {
   display: block;
   width: 75%;
   height: 5px;
@@ -774,16 +792,19 @@ main,
   border-radius: 99px;
   margin: 12px 0;
 }
-.art-window i:nth-child(2) {
+.art-window:not(.has-image) i:nth-child(2) {
   width: 55%;
 }
-.art-window i:nth-child(3) {
+.art-window:not(.has-image) i:nth-child(3) {
   width: 88%;
   height: 42px;
   margin-top: 25px;
 }
 .project-body {
   padding: 24px 18px 18px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 .project-top {
   display: flex;
@@ -805,12 +826,13 @@ main,
   line-height: 1.7;
   max-width: 500px;
   min-height: 44px;
+  margin-bottom: 24px;
 }
 .project-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 24px;
+  margin-top: auto;
 }
 .tags {
   display: flex;
@@ -1102,6 +1124,9 @@ main,
   .hero-visual {
     display: none;
   }
+  .project-art {
+    min-height: 250px;
+  }
 }
 
 @media (max-width: 760px) {
@@ -1152,7 +1177,10 @@ main,
     grid-template-columns: 1fr;
   }
   .project-art {
-    height: 245px;
+    min-height: 0;
+  }
+  .art-window.has-image {
+    width: min(88%, 360px);
   }
   .interests {
     padding-top: 0;

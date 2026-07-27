@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   buildDir: '.nuxt',
   devtools: { enabled: false },
-  modules: ['@vueuse/motion/nuxt', '@nuxtjs/i18n', '@nuxt/eslint'],
+  modules: ['@vueuse/motion/nuxt', '@nuxtjs/i18n', '@nuxt/eslint', 'nuxt-gtag'],
   css: ['~/assets/css/main.css'],
   runtimeConfig: {
     public: {
@@ -25,6 +25,9 @@ export default defineNuxtConfig({
       redirectOn: 'root',
       fallbackLocale: 'en'
     }
+  },
+  gtag: {
+    id: 'G-L96ZXCFZZ1'
   },
   nitro: {
     prerender: {
